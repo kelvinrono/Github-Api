@@ -1,4 +1,6 @@
+import { SearchGithubService } from './../search-github.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-github-form',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubFormComponent implements OnInit {
 
-  constructor() { }
+  username:string;
+  searchGithubService:SearchGithubService;
+  submitUsername(){
+    this.searchGithubService.getUserData(this.username)
+  }
+  constructor(searchGithubService:SearchGithubService) { 
+    this.searchGithubService = searchGithubService;
+  }
 
   ngOnInit(): void {
   }
