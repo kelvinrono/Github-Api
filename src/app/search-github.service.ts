@@ -26,5 +26,19 @@ export class SearchGithubService {
         created_at: Date
   
       }
+      let promise = new Promise<void>((resolve, reject) => {
+        this.http.get<ApiResponse>("https://api.github.com/users/" + username).toPromise().then(response => {
+  
+          this.user.bio = response.bio;
+          this.user.login = response.login;
+          this.user.public_repos = response.public_repos;
+          this.user.avatar_url = response.avatar_url;
+          this.user.created_at = response.created_at;
+  
+          resolve()
+  
+        }, error => {
+          reject(error)
+      
     }
 }
