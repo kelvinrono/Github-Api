@@ -39,6 +39,19 @@ export class SearchGithubService {
   
         }, error => {
           reject(error)
+        })
+        this.http.get<any>("https://api.github.com/users/" + username + "/repos").toPromise().then(response =>{
+          for(let i=0;i<response.length;i++){
+            this.newUserData = new Repository(response[i].name, response[i].description, response[i].updated_at, response[i].clone_url, response[i].language)
+            this.repoData.push(this.newUserData)
+          }
+          resolve()
+        }, error => {
+          reject(error)
+        })
+  
+      })
+      return promise;
       
     }
 }
