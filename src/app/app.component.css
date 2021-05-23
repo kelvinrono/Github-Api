@@ -1,0 +1,19 @@
+*, ::after,::before{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    background-color: #66ccc1;
+    height: 100vh;
+    margin: 0px auto;
+    padding: 10px;
+    
+}
+.share{
+    line-height: 40px;
+    margin: 10px;
+    display: flex;
+    
+
+}

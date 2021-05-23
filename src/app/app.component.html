@@ -1,9 +1,14 @@
 <!-- <app-goal></app-goal> -->
 <div class="container">
+  <div class="row">
+  <p></p>
+    <div class="col-md-6 ">
+  <a class="btn btn-success btn-sm share" routerLink='/github-form'>Enter Gitub name</a>
+  </div>
   <div class="col-md-6">
-  <p>Welcome to github portfolio</p>
-  <a class="btn btn-outline-success btn-sm" routerLink='/github-form'>share github name</a>
-  <a class="btn btn-outline-success btn-sm" routerLink='/github-details'>See results</a>
+    <a class="btn btn-success btn-sm share" routerLink='/github-details'>View results</a>
+  </div>
+  
   <router-outlet></router-outlet>
   </div>
 </div>
