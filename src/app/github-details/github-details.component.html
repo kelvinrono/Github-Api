@@ -3,7 +3,7 @@
 <h4><b> Giuthub username:</b> {{user.login}}</h4>
 <img src="{{user.avatar_url}}" alt="Image">
 <p><b>Bio</b>: {{user.bio}}</p>
-<p><b>created on:</b> {{user.created_at}}</p>
+<p><b>created on:</b> {{user.created_at | date }}</p>
 <p> <b>No. of repositories:</b> {{user.public_repos}}</p>
 </div>
 
@@ -12,7 +12,7 @@
     <p appHighlight> <b>repository Name:</b>{{repoDetail.name}} } <span> | Clone url:  {{repoDetail.clone_url}}</span></p>
     <p><b>Description: </b>{{repoDetail.description}}</p>
     <p><b>Language used: </b>{{repoDetail.language}}</p>
-    <p><b>Updated at: </b>{{repoDetail.updated_at}}</p>
+    <p><b>Updated at: </b>{{repoDetail.updated_at | date }}</p>
 </div>
 </div>
 
