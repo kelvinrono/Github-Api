@@ -6,7 +6,7 @@
 <p><b>created on:</b> {{user.created_at | date }}</p>
 <p> <b>No. of repositories:</b> {{user.public_repos}}</p>
 </div>
-
+<hr>
 <div *ngFor = "let repoDetail of repoDetails" >
     <div class="card">
     <p appHighlight> <b>repository Name:</b>{{repoDetail.name}} } <span> | Clone url:  {{repoDetail.clone_url}}</span></p>

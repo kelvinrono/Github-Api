@@ -13,7 +13,7 @@ export class GithubFormComponent implements OnInit {
   searchGithubService:SearchGithubService;
   submitUsername(){
     this.searchGithubService.getUserData(this.username)
-    alert('Click on view results to see the fedback')
+    alert('Click on view results to see the fetched data')
   }
   constructor(searchGithubService:SearchGithubService) { 
     this.searchGithubService = searchGithubService;
